@@ -72,6 +72,7 @@ root
 - Assertions
   - [to_be_between](#to_be_between)
   - [to_be_different_from](#to_be_different_from)
+  - [to_be_empty](#to_be_empty)
   - [to_be_equal_to](#to_be_equal_to)
   - [to_be_false](#to_be_false)
   - [to_be_true](#to_be_true)
@@ -105,6 +106,22 @@ import khalyomede.expect { expect }
 
 fn test_it_checks_value_difference() {
   expect("hello world").to_be_different_from("hi world")
+}
+```
+
+Reverse: [to_be_equal_to](#to_be_equal_to)
+
+[Back to examples](#examples)
+
+### to_be_empty
+
+```v
+module test
+
+import khalyomede.expect { expect }
+
+fn test_it_checks_string_is_empty() {
+  expect("").to_be_empty()
 }
 ```
 
