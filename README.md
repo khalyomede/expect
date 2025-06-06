@@ -70,6 +70,7 @@ root
 ## Examples
 
 - Assertions
+  - [to_be_between](#to_be_between)
   - [to_be_different_from](#to_be_different_from)
   - [to_be_equal_to](#to_be_equal_to)
   - [to_be_false](#to_be_false)
@@ -79,6 +80,20 @@ root
   - [to_not_start_with](#to_not_start_with)
   - [to_start_with](#to_start_with)
 - [Chaining multiple checks](#chaining-multiple-checks)
+
+### to_be_between
+
+```v
+module test
+
+import khalyomede.expect { expect }
+
+fn test_it_checks_int_between_two_int() {
+  expect(42).to_be_between(41, 43)
+}
+```
+
+[Back to examples](#examples)
 
 ### to_be_different_from
 
