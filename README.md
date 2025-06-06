@@ -7,8 +7,8 @@ module test
 
 import khalyomede.expect { expect }
 
-fn test_checks_values_are_equal() {
-  expect(true).to_be_true()
+fn test_checks_string_start_word() {
+  expect("Hello world").to_not_start_with("Hey")
 }
 ```
 
@@ -69,20 +69,144 @@ root
 
 ## Examples
 
-- [Check a value is true](#check-a-value-is-true)
+- Assertions
+  - [to_be_different_from](#to_be_different_from)
+  - [to_be_equal_to](#to_be_equal_to)
+  - [to_be_false](#to_be_false)
+  - [to_be_true](#to_be_true)
+  - [to_contain](#to_contain)
+  - [to_not_contain](#to_not_contain)
+  - [to_not_start_with](#to_not_start_with)
+  - [to_start_with](#to_start_with)
 - [Chaining multiple checks](#chaining-multiple-checks)
 
-### Check a value is true
+### to_be_different_from
 
 ```v
 module test
 
 import khalyomede.expect { expect }
 
-fn test_a_value_is_true() {
+fn test_it_checks_value_difference() {
+  expect("hello world").to_be_different_from("hi world")
+}
+```
+
+Reverse: [to_be_equal_to](#to_be_equal_to)
+
+[Back to examples](#examples)
+
+### to_be_equal_to
+
+```v
+module test
+
+import khalyomede.expect { expect }
+
+fn test_it_checks_value_equality() {
+  expect("hello world").to_be_equal_to("hello world")
+}
+```
+
+Reverse: [to_be_different_from](#to_be_different_from)
+
+[Back to examples](#examples)
+
+### to_be_false
+
+```v
+module test
+
+import khalyomede.expect { expect }
+
+fn test_it_checks_falsy_value() {
+  expect(false).to_be_false()
+}
+```
+
+Reverse: [to_be_true](#to_be_true)
+
+[Back to examples](#examples)
+
+### to_be_true
+
+```v
+module test
+
+import khalyomede.expect { expect }
+
+fn test_it_checks_truthy_value() {
   expect(true).to_be_true()
 }
 ```
+
+Reverse: [to_be_false](#to_be_false)
+
+[Back to examples](#examples)
+
+### to_contain
+
+```v
+module test
+
+import khalyomede.expect { expect }
+
+fn test_it_checks_int_is_int_array_of_int() {
+  expect([1, 2, 3]).to_contain(2)
+}
+```
+
+Reverse: [to_not_contain](#to_not_contain)
+
+[Back to examples](#examples)
+
+### to_not_contain
+
+```v
+module test
+
+import khalyomede.expect { expect }
+
+fn test_it_checks_int_is_int_array_of_int() {
+  expect("hello world").to_not_contain("people")
+}
+```
+
+Reverse: [to_contain](#to_contain)
+
+[Back to examples](#examples)
+
+### to_not_start_with
+
+```v
+module test
+
+import khalyomede.expect { expect }
+
+fn test_it_checks_string_doesnt_start_with_another() {
+  expect("hello world").to_start_with("hey")
+}
+```
+
+Reverse: [to_start_with](#to_start_with)
+
+[Back to examples](#examples)
+
+### to_start_with
+
+```v
+module test
+
+import khalyomede.expect { expect }
+
+fn test_it_checks_string_starts_with_another() {
+  expect("hello world").to_start_with("hello")
+}
+```
+
+Reverse: [to_not_start_with](#to_not_start_with)
+
+[Back to examples](#examples)
 
 ### Chaining multiple checks
 
