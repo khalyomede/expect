@@ -78,6 +78,7 @@ root
   - [to_be_true](#to_be_true)
   - [to_contain](#to_contain)
   - [to_have_length](#to_have_length)
+  - [to_not_be_empty](#to_not_be_empty)
   - [to_not_contain](#to_not_contain)
   - [to_not_start_with](#to_not_start_with)
   - [to_start_with](#to_start_with)
@@ -125,7 +126,7 @@ fn test_it_checks_string_is_empty() {
 }
 ```
 
-Reverse: [to_be_equal_to](#to_be_equal_to)
+Reverse: [to_not_be_empty](#to_not_be_empty)
 
 [Back to examples](#examples)
 
@@ -204,6 +205,22 @@ fn test_it_checks_strings_have_correct_length() {
   expect("hello world").to_have_length(11)
 }
 ```
+
+[Back to examples](#examples)
+
+### to_not_be_empty
+
+```v
+module test
+
+import khalyomede.expect { expect }
+
+fn test_it_checks_string_is_not_empty() {
+  expect("hello world").to_not_be_empty()
+}
+```
+
+Reverse: [to_be_empty](#to_be_empty)
 
 [Back to examples](#examples)
 
