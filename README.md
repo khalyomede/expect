@@ -76,6 +76,7 @@ root
   - [to_be_false](#to_be_false)
   - [to_be_true](#to_be_true)
   - [to_contain](#to_contain)
+  - [to_have_length](#to_have_length)
   - [to_not_contain](#to_not_contain)
   - [to_not_start_with](#to_not_start_with)
   - [to_start_with](#to_start_with)
@@ -172,6 +173,20 @@ fn test_it_checks_int_is_int_array_of_int() {
 ```
 
 Reverse: [to_not_contain](#to_not_contain)
+
+[Back to examples](#examples)
+
+### to_have_length
+
+```v
+module test
+
+import khalyomede.expect { expect }
+
+fn test_it_checks_strings_have_correct_length() {
+  expect("hello world").to_have_length(11)
+}
+```
 
 [Back to examples](#examples)
 
