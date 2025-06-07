@@ -40,7 +40,7 @@ I also wanted to ease the testing of advanced assertions, like testing a functio
 In your terminal, run this command:
 
 ```bash
-v install khalyomede.expecr
+v install khalyomede.expect
 ```
 
 [Back to installation](#installation)
