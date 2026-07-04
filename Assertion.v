@@ -1,5 +1,5 @@
 module expect
 
-pub struct Expectation[T] {
+pub struct Assertion[T] {
     actual_value T
 }
