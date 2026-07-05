@@ -1,3 +1,5 @@
+module expect
+
 type Number =
     u8
     | u16

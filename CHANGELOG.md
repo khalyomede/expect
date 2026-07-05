@@ -6,6 +6,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 
 ## [Unreleased]
 
+### Fixed
+
+- No more compilation error about `Number.v` not in the right module.
+
 ## [0.2.0] - 2026-07-05
 
 ### Added
